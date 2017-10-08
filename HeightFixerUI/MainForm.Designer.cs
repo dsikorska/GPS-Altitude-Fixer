@@ -38,6 +38,9 @@
             this.ConvertProgresser = new System.ComponentModel.BackgroundWorker();
             this.inputPathLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // inputFileValue
@@ -46,7 +49,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.inputFileValue.Enabled = false;
             this.inputFileValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.inputFileValue.Location = new System.Drawing.Point(12, 37);
+            this.inputFileValue.Location = new System.Drawing.Point(14, 63);
             this.inputFileValue.Name = "inputFileValue";
             this.inputFileValue.Size = new System.Drawing.Size(680, 29);
             this.inputFileValue.TabIndex = 0;
@@ -57,16 +60,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.outputFileValue.Enabled = false;
             this.outputFileValue.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.outputFileValue.Location = new System.Drawing.Point(12, 103);
+            this.outputFileValue.Location = new System.Drawing.Point(14, 129);
             this.outputFileValue.Name = "outputFileValue";
             this.outputFileValue.Size = new System.Drawing.Size(680, 29);
             this.outputFileValue.TabIndex = 1;
             // 
             // progressBar
             // 
-            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar.Location = new System.Drawing.Point(12, 215);
+            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar.Location = new System.Drawing.Point(14, 241);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(773, 30);
             this.progressBar.TabIndex = 2;
@@ -75,7 +77,7 @@
             // 
             this.browseInputButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.browseInputButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.browseInputButton.Location = new System.Drawing.Point(698, 37);
+            this.browseInputButton.Location = new System.Drawing.Point(700, 63);
             this.browseInputButton.Name = "browseInputButton";
             this.browseInputButton.Size = new System.Drawing.Size(87, 29);
             this.browseInputButton.TabIndex = 3;
@@ -87,7 +89,7 @@
             // 
             this.outputBrowseButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.outputBrowseButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.outputBrowseButton.Location = new System.Drawing.Point(698, 103);
+            this.outputBrowseButton.Location = new System.Drawing.Point(700, 129);
             this.outputBrowseButton.Name = "outputBrowseButton";
             this.outputBrowseButton.Size = new System.Drawing.Size(87, 29);
             this.outputBrowseButton.TabIndex = 4;
@@ -97,10 +99,9 @@
             // 
             // startButton
             // 
-            this.startButton.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
+            this.startButton.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.startButton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.startButton.Location = new System.Drawing.Point(339, 153);
+            this.startButton.Location = new System.Drawing.Point(341, 179);
             this.startButton.Name = "startButton";
             this.startButton.Size = new System.Drawing.Size(119, 38);
             this.startButton.TabIndex = 5;
@@ -119,7 +120,7 @@
             // 
             this.inputPathLabel.AutoSize = true;
             this.inputPathLabel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.inputPathLabel.Location = new System.Drawing.Point(8, 9);
+            this.inputPathLabel.Location = new System.Drawing.Point(10, 35);
             this.inputPathLabel.Name = "inputPathLabel";
             this.inputPathLabel.Size = new System.Drawing.Size(109, 21);
             this.inputPathLabel.TabIndex = 6;
@@ -129,18 +130,36 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(8, 79);
+            this.label1.Location = new System.Drawing.Point(10, 105);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(122, 21);
             this.label1.TabIndex = 7;
             this.label1.Text = "Output file path:";
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.aboutToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(797, 24);
+            this.menuStrip1.TabIndex = 9;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // aboutToolStripMenuItem
+            // 
+            this.aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
+            this.aboutToolStripMenuItem.Size = new System.Drawing.Size(52, 20);
+            this.aboutToolStripMenuItem.Text = "About";
+            this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutStripButton_Click);
             // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 30F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(797, 271);
+            this.ClientSize = new System.Drawing.Size(797, 285);
+            this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.inputPathLabel);
             this.Controls.Add(this.startButton);
@@ -153,9 +172,12 @@
             this.Font = new System.Drawing.Font("Segoe UI", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "MainForm";
-            this.Text = "GPS Height Fixer";
+            this.Text = "GPS Altitude Fixer v.1.0";
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -172,6 +194,8 @@
         private System.ComponentModel.BackgroundWorker ConvertProgresser;
         private System.Windows.Forms.Label inputPathLabel;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
     }
 }
 

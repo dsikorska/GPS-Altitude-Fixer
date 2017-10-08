@@ -1,14 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using HeightFixerLibrary;
-using System.IO;
 
 namespace HeightFixerUI
 {
@@ -21,16 +14,30 @@ namespace HeightFixerUI
             InitializeComponent();
             inputFileValue.Text = "";
             outputFileValue.Text = "";
+            startButton.Enabled = false;
+            outputBrowseButton.Enabled = false;
         }
 
         private void browseInputButton_Click(object sender, EventArgs e)
         {
-            SetInput();        
+            SetInput();
+            if (inputFileValue.Text != "" && outputFileValue.Text != "")
+            {
+                startButton.Enabled = true;
+            }
+            if (inputFileValue.Text != "")
+            {
+                outputBrowseButton.Enabled = true;
+            }
         }
 
         private void outputBrowseButton_Click(object sender, EventArgs e)
         {
             SetOutput(model.InputPath);
+            if (inputFileValue.Text != null && outputFileValue.Text != null)
+            {
+                startButton.Enabled = true;
+            }
         }
 
         private void SetInput()
@@ -88,12 +95,27 @@ namespace HeightFixerUI
 
         private void ConvertProgresser_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
-            this.Enabled = true;
+            DialogResult successBox = MessageBox.Show("Well done!", "Success!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            if (successBox == DialogResult.OK)
+            {            
+                this.Enabled = true;
+                inputFileValue.Text = "";
+                outputFileValue.Text = "";
+                model = new ConverterModel();
+                progressBar.Value = 0;
+                startButton.Enabled = false;
+                outputBrowseButton.Enabled = false;
+            }
         }
 
         private void ConvertProgresser_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
             progressBar.Value = e.ProgressPercentage;
+        }
+
+        private void aboutStripButton_Click(object sender, EventArgs e)
+        {        
+            MessageBox.Show("The application converts GPS altitude from model WGS-84 to EGM-2008. \r\nPlease load the file from the GPS device \".nmea\".", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
 }
