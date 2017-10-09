@@ -114,8 +114,12 @@ namespace HeightFixerUI
         }
 
         private void aboutStripButton_Click(object sender, EventArgs e)
-        {        
-            MessageBox.Show("The application converts GPS altitude from model WGS-84 to EGM-2008. \r\nPlease load the file from the GPS device \".nmea\".", "About", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        {
+            MessageBox.Show(
+            "The application converts GPS altitude from model WGS-84 to EGM-2008. \r\nPlease load the file from the GPS device with \".nmea\" extension.\r\n                    ----------------------------------------\nVersion: 1.0\r\nContact: ladyhail@outlook.com",
+            "About",
+            MessageBoxButtons.OK,
+            MessageBoxIcon.Information);
         }
     }
 }

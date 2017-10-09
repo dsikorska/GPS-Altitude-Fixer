@@ -67,7 +67,8 @@
             // 
             // progressBar
             // 
-            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar.Location = new System.Drawing.Point(14, 241);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(773, 30);
@@ -99,7 +100,7 @@
             // 
             // startButton
             // 
-            this.startButton.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.startButton.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.startButton.Font = new System.Drawing.Font("Segoe UI Semibold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.startButton.Location = new System.Drawing.Point(341, 179);
             this.startButton.Name = "startButton";
@@ -175,7 +176,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(6, 7, 6, 7);
             this.Name = "MainForm";
-            this.Text = "GPS Altitude Fixer v.1.0";
+            this.Text = "GPS Altitude Fixer v1.0";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
